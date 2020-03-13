@@ -3,8 +3,11 @@ def base_hash
   # Remember implicit return! We're returning this new Hash _without_ the
   # keyword "return." Nice and neat.
   
-  base = Hash.new
-  base[:railroads] = {}
+  base = {
+    railroads: {
+      
+    }
+  }
   base
 end
 
@@ -60,7 +63,6 @@ def monopoly_with_fourth_tier
   base[:railroads][:rent_in_dollars][:two_pieces_owned] = 50
   base[:railroads][:rent_in_dollars][:three_pieces_owned] = 100
   base[:railroads][:rent_in_dollars][:four_pieces_owned] = 200
-  #binding.pry
   base[:railroads][:names][:reading_railroad] = {}
   base[:railroads][:names][:pennsylvania_railroad] = {}
   base[:railroads][:names][:b_and_o_railroad] = {}
@@ -69,6 +71,7 @@ def monopoly_with_fourth_tier
   base[:railroads][:names][:pennsylvania_railroad][:mortgage_value] = 200
   base[:railroads][:names][:b_and_o_railroad][:mortgage_value] = 400
   base[:railroads][:names][:shortline_railroad][:mortgage_value] = 800
+  binding.pry
   base
 
 end
